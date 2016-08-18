@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinClasses.XamarinFormsXaml"
+             xmlns:viewModel="clr-namespace:XamarinClasses.XamarinFormsXaml"
+             x:Class="XamarinClasses.XamarinFormsXaml.MainPage">
+
+  <ContentPage.BindingContext>
+    <viewModel:MainPageViewModel/>
+  </ContentPage.BindingContext>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="3*"/>
+      <RowDefinition Height="7*"/>
+    </Grid.RowDefinitions>
+    <StackLayout Orientation="Horizontal" Grid.Row="0">
+      <Label Text="{Binding Text}"
+               VerticalOptions="Center"
+               HorizontalOptions="Center" />
+    </StackLayout>
+
+    <StackLayout Orientation="Horizontal" Grid.Row="1">
+      <Button Text="Click me" Command="{Binding CommandButtonClick}"/>
+    </StackLayout>
+  </Grid>
+
+
+
+
+</ContentPage>
